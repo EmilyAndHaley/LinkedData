@@ -1,0 +1,70 @@
+O L705    Acne excoriée des jeunes filles
+N L705    Acne excoriee des jeunes filles
+O M0888   Other juvenile arthritis, vertebrae
+N M0888   Other juvenile arthritis, other specified site
+O M1208   Chronic postrheumatic arthropathy [Jaccoud], vertebrae
+N M1208   Chronic postrheumatic arthropathy [Jaccoud], other specified site
+O M1228   Villonodular synovitis (pigmented), vertebrae
+N M1228   Villonodular synovitis (pigmented), other specified site
+O M1238   Palindromic rheumatism, vertebrae
+N M1238   Palindromic rheumatism, other specified site
+O M1258   Traumatic arthropathy, vertebrae
+N M1258   Traumatic arthropathy, other specified site
+O M1288   Other specific arthropathies, not elsewhere classified, vertebrae
+N M1288   Other specific arthropathies, not elsewhere classified, other specified site
+O M2508   Hemarthrosis, vertebrae
+N M2508   Hemarthrosis, other specified site
+O M2518   Fistula, vertebrae
+N M2518   Fistula, other specified site
+D M4717   Other spondylosis with myelopathy, lumbosacral region
+D M4718   Other spondylosis with myelopathy, sacral and sacrococcygeal region
+O M5001   Cervical disc disorder with myelopathy, occipito-atlanto-axial region
+N M5001   Cervical disc disorder with myelopathy,  high cervical region
+O M5011   Cervical disc disorder with radiculopathy, occipito-atlanto-axial region
+N M5011   Cervical disc disorder with radiculopathy,  high cervical region
+O M5021   Other cervical disc displacement, occipito-atlanto-axial region
+N M5021   Other cervical disc displacement,  high cervical region
+O M5031   Other cervical disc degeneration, occipito-atlanto-axial region
+N M5031   Other cervical disc degeneration,  high cervical region
+O M5081   Other cervical disc disorders, occipito-atlanto-axial region
+N M5081   Other cervical disc disorders,  high cervical region
+O M5091   Cervical disc disorder, unspecified, occipito-atlanto-axial region
+N M5091   Cervical disc disorder, unspecified,  high cervical region
+D M5107   Intervertebral disc disorders with myelopathy, lumbosacral region
+O M8458XA Pathological fracture in neoplastic disease, vertebrae, initial encounter for fracture
+N M8458XA Pathological fracture in neoplastic disease, other specified site, initial encounter for fracture
+O M8458XD Pathological fracture in neoplastic disease, vertebrae, subsequent encounter for fracture with routine healing
+N M8458XD Pathological fracture in neoplastic disease, other specified site, subsequent encounter for fracture with routine healing
+O M8458XG Pathological fracture in neoplastic disease, vertebrae, subsequent encounter for fracture with delayed healing
+N M8458XG Pathological fracture in neoplastic disease, other specified site, subsequent encounter for fracture with delayed healing
+O M8458XK Pathological fracture in neoplastic disease, vertebrae, subsequent encounter for fracture with nonunion
+N M8458XK Pathological fracture in neoplastic disease, other specified site, subsequent encounter for fracture with nonunion
+O M8458XP Pathological fracture in neoplastic disease, vertebrae, subsequent encounter for fracture with malunion
+N M8458XP Pathological fracture in neoplastic disease, other specified site, subsequent encounter for fracture with malunion
+O M8458XS Pathological fracture in neoplastic disease, vertebrae, sequela
+N M8458XS Pathological fracture in neoplastic disease, other specified site, sequela
+O T2056XA Corrosion of first degree of cheek, initial encounter
+N T2056XA Corrosion of first degree of forehead and cheek, initial encounter
+O T2056XD Corrosion of first degree of cheek, subsequent encounter
+N T2056XD Corrosion of first degree of forehead and cheek, subsequent encounter
+O T2056XS Corrosion of first degree of cheek, sequela
+N T2056XS Corrosion of first degree of forehead and cheek, sequela
+D T401X5A Adverse effect of heroin, initial encounter
+D T401X5D Adverse effect of heroin, subsequent encounter
+D T401X5S Adverse effect of heroin, sequela
+D T408X5A Adverse effect of lysergide [LSD], initial encounter
+D T408X5D Adverse effect of lysergide [LSD], subsequent encounter
+D T408X5S Adverse effect of lysergide [LSD], sequela
+O W9431XA Exposure to sudden change in air pressure in aircraft during ascent or descent, initial encounter
+N W9431XA Exposure to sudden change in air pressure in aircraft during descent, initial encounter
+O W9431XD Exposure to sudden change in air pressure in aircraft during ascent or descent, subsequent encounter
+N W9431XD Exposure to sudden change in air pressure in aircraft during descent, subsequent encounter
+O W9431XS Exposure to sudden change in air pressure in aircraft during ascent or descent, sequela
+N W9431XS Exposure to sudden change in air pressure in aircraft during descent, sequela
+O Y92002  Bathroom of unspecified non-institutional private) residence single-family (private) house as the place of occurrence of the external cause
+N Y92002  Bathroom of unspecified non-institutional (private) residence single-family (private) house as the place of occurrence of the external cause
+    69832 old_lines_read
+    69823 new_lines_read
+        0 additions
+        9 deletions
+       28 changes

@@ -1,0 +1,96 @@
+"CM" is USA's "Clinical Modification" of WHO ICD-10 codes.
+*******************************************************
+http://www.cdc.gov/nchs/data/icd/2014_icd10cm_preface.pdf
+http://www.cdc.gov/nchs/data/icd/icd10cm_guidelines_2014.pdf
+.zip files from
+ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2014/
+*******************************************************
+
+see below ICD10cm_order_2014.txt
+contains all ICD-10-CM (diagnosis) codes valid for FY2014.
+*******************************************************
+
+
+
+******************************************************
+Contents of ICD10CM_FY2014_Full_XML.zip 
+
+ICD10CM_FY2014_Full_XML_DIndex.xml
+alphabetically ordered multlevel index of terms.  Terms of many
+types are indexed together.
+-------------------------------------
+ICD10CM_FY2014_Full_XML_Tabular.xml
+ICD-10-CM TABULAR LIST of DISEASES and INJURIES
+starts with instructions.
+--good for a person to find a code
+It is the data behind WHO's ICD browser.. 
+Like a table of contents, chapters, sections with code ranges.
+<name>8</name>
+    <desc>Diseases of the ear and mastoid process (H60-H95)</desc>
+Each chapter starts with a small outline, like a table of subcontents,
+followed by the actual tree, ending in single codes. 
+------------------------------------
+ICD10CM_FY2014_Full_XML_EIndex.xml
+alphabetical --good for a person to find a code 
+  <title>ICD-10-CM External Cause of Injuries Index</title>
+-----------------------------------
+ICD10CM_FY2014_Full_XML_TableOfDrugs.xml
+Chemical, brand names => code like   <title>Prussic acid</title>
+                <cell col="2">T65.0X1</cell>
+[what are the columns??]
+-----------------------------------
+ ICD10CM_FY2014_Full_XML_TableOfNeoplasms.xml
+-----------------------------------
+**************************************************
+ICD10CM-FY2014_OrderFiles.zip
+
+Archive:  ICD10CM-FY2014_OrderFiles.zip
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+ 13716322  06-10-13 09:35   icd10cm_order_2014.txt
+     5224  06-10-13 09:37   icd10cm_diff_2014.txt
+    25376  07-03-13 11:02   icd10cm_diff_readme_FY2014.pdf
+   102282  07-03-13 11:02   ICD10OrderFiles_FY2014.pdf
+
+------------------------------------------------
+icd10cm_order_2014.txt 
+00001 A00     0 Cholera                                                      Cholera
+00002 A000    1 Cholera due to Vibrio cholerae 01, biovar cholerae           Cholera due to Vibrio cholerae 01, biovar cholerae
+00003 A001    1 Cholera due to Vibrio cholerae 01, biovar eltor              Cholera due to Vibrio cholerae 01, biovar eltor
+------------------------------------------------
+icd10cm_diff_2014.txt
+differences..
+O M0888   Other juvenile arthritis, vertebrae
+N M0888   Other juvenile arthritis, other specified site
+[deletions?]
+D M4718   Other spondylosis with myelopathy, sacral and sacrococcygeal region
+--------------------------------------
+icd10cm_diff_readme_FY2014.pdf
+--------------------------------------
+ICD10OrderFiles_FY2014.pdf
+The ICD-10-CM/PCS order files contain a unique âorder numberâ for each
+valid code or header, a flag distinguishing valid codes from headers,
+and both long and short descriptions combined in a single file so they
+are easier to find and use. ICD10pcs_order_2014.txt contains
+ICD-10-PCS (procedure) codes valid for FY2014. ICD10cm_order_2014.txt
+contains all ICD-10-CM (diagnosis) codes valid for FY2014.
+[The order numbers determine of two codes, which is a subcode of the other?] 
+---------------------------------------
+
+**************************************************
+**************************************************
+icd10cm_guidelines_2014.pdf
+in ICD-10-CM Official Guidelines for Coding and Reporting
+
+"Codes that describe symptoms and signs, as opposed to diagnoses, are
+acceptable for reporting purposes when a related definitive diagnosis
+has not been established (confirmed) by the provider. Chapter 18 of
+ICD-10-CM, Symptoms, Signs, and Abnormal Clinical and Laboratory
+Findings, Not Elsewhere Classified (codes R00.0 - R99) contains many,
+but not all codes for symptoms."
+--------------------------------------------------
+explantions in English for assignment of codes, organized by chapter number.
+**************************************************
+http://www.cdc.gov/nchs/data/icd/DiagnosisGEMs_2014.zip
+"General Equivalence Mapping (GEM)"
+support translation from 10 to 9 and 9 to 10
