@@ -1,0 +1,48 @@
+Data sets downloaded from
+
+http://www.orphadata.org/cgi-bin/index.php/
+
+with
+
+
+  wget http://www.orphadata.org/data/xml/en_product1.xml
+  wget http://www.orphadata.org/data/xml/en_product2.xml
+  wget http://www.orphadata.org/data/xml/en_product2.xml
+  wget http://www.orphadata.org/data/xml/en_product3_146.xml
+  wget http://www.orphadata.org/data/xml/en_product3_147.xml
+  wget http://www.orphadata.org/data/xml/en_product3_150.xml
+  wget http://www.orphadata.org/data/xml/en_product3_152.xml
+  wget http://www.orphadata.org/data/xml/en_product3_181.xml
+  wget http://www.orphadata.org/data/xml/en_product3_182.xml
+  wget http://www.orphadata.org/data/xml/en_product3_183.xml
+  wget http://www.orphadata.org/data/xml/en_product3_184.xml
+  wget http://www.orphadata.org/data/xml/en_product3_185.xml
+  wget http://www.orphadata.org/data/xml/en_product3_186.xml
+  wget http://www.orphadata.org/data/xml/en_product3_187.xml
+  wget http://www.orphadata.org/data/xml/en_product3_188.xml
+  wget http://www.orphadata.org/data/xml/en_product3_189.xml
+  wget http://www.orphadata.org/data/xml/en_product3_193.xml
+  wget http://www.orphadata.org/data/xml/en_product3_194.xml
+  wget http://www.orphadata.org/data/xml/en_product3_195.xml
+  wget http://www.orphadata.org/data/xml/en_product3_196.xml
+  wget http://www.orphadata.org/data/xml/en_product3_197.xml
+  wget http://www.orphadata.org/data/xml/en_product3_198.xml
+  wget http://www.orphadata.org/data/xml/en_product3_199.xml
+  wget http://www.orphadata.org/data/xml/en_product3_200.xml
+  wget http://www.orphadata.org/data/xml/en_product3_201.xml
+  wget http://www.orphadata.org/data/xml/en_product3_20.xml
+  wget http://www.orphadata.org/data/xml/en_product3_202.xml
+  wget http://www.orphadata.org/data/xml/en_product3_203.xml
+  wget http://www.orphadata.org/data/xml/en_product3_204.xml
+  wget http://www.orphadata.org/data/xml/en_product3_205.xml
+  wget http://www.orphadata.org/data/xml/en_product3_209.xml
+  wget http://www.orphadata.org/data/xml/en_product3_212.xml
+  wget http://www.orphadata.org/data/xml/en_product3_216.xml
+  wget http://www.orphadata.org/data/xml/en_product3_148.xml
+  wget http://www.orphadata.org/data/xml/en_product3_156.xml
+  wget http://www.orphadata.org/cgi-bin/docs/orphadata-annotation-guide.pdf
+  wget http://www.orphadata.org/data/xml/en_product4.xml
+  wget http://www.orphadata.org/data/xml/en_product5.xml
+  wget http://www.orphadata.org/data/xml/en_product6.xml
+  wget http://www.orphadata.org/data/ORDO/ordo_orphanet.owl.zip
+
