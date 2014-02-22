@@ -37,6 +37,10 @@ try:
     stemmer = xapian.Stem("english")
     indexer.set_stemmer(stemmer)
 
+    # Add spellcheck capabilities to this index.
+    indexer.set_database(database)
+    indexer.set_flags(xapian.TermGenerator.FLAG_SPELLING)
+
     para = ''
     try:
         for line in sys.stdin:

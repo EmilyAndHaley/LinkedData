@@ -46,8 +46,9 @@ try:
     qp.set_stemmer(stemmer)
     qp.set_database(database)
     qp.set_stemming_strategy(xapian.QueryParser.STEM_SOME)
-    query = qp.parse_query(query_string)
+    query = qp.parse_query(query_string, xapian.QueryParser.FLAG_SPELLING_CORRECTION)
     print "Parsed query is: %s" % str(query)
+    print "Corrected query: %s" % (qp.get_corrected_query_string())
 
     # Find the top 10 results for the query.
     enquire.set_query(query)
