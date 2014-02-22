@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# Simple command-line search script.
+# Simple example script demonstrating query expansion.
 #
 # Originally by Paul Legato (plegato@nks.net), 4/22/06.
 #
@@ -25,7 +25,7 @@
 require 'xapian'
 
 if ARGV.size < 2
-  $stderr.puts "Usage: #{$0} PATH_TO_DATABASE QUERY"
+  $stderr.puts "Usage: #{$0} PATH_TO_DATABASE QUERY [-- [DOCID...]]"
   exit 99
 end
 
@@ -35,31 +35,64 @@ database = Xapian::Database.new(ARGV[0])
 # Start an enquire session.
 enquire = Xapian::Enquire.new(database)
 
+queryString = ''
+relevantDocs = Xapian::RSet.new()
+onDocIdsYet = false
+
 # Combine the rest of the command line arguments with spaces between
 # them, so that simple queries don't have to be quoted at the shell
 # level.
-queryString = ARGV[1..-1].join(' ')
+ARGV.each_with_index { |arg,index|
+  next if index == 0 # skip path to db
+
+  if arg == '--'
+    onDocIdsYet = true
+    next
+  end
+
+  if onDocIdsYet
+    relevantDocs.add_document(arg.to_i)
+  else
+    queryString += ' ' unless queryString.empty?
+    queryString += arg
+  end
+}
+
 
 # Parse the query string to produce a Xapian::Query object.
 qp = Xapian::QueryParser.new()
 stemmer = Xapian::Stem.new("english")
 qp.stemmer = stemmer
 qp.database = database
-qp.stemming_strategy = Xapian::QueryParser::STEM_ALL
-query = qp.parse_query(queryString, Xapian::QueryParser::FLAG_SPELLING_CORRECTION)
+qp.stemming_strategy = Xapian::QueryParser::STEM_SOME
+query = qp.parse_query(queryString)
 
-puts "Parsed query is: #{query.description()}"
+unless query.empty?
+  puts "Parsed query is: #{query.description()}"
 
-puts 'suggestion:'+qp.get_corrected_query_string()
+  # Find the top 10 results for the query.
+  enquire.query = query
+  matchset = enquire.mset(0, 10, relevantDocs)
 
-# Find the top 10 results for the query.
-enquire.query = query
-matchset = enquire.mset(0, 10)
+  # Display the results.
+  puts "#{matchset.matches_estimated()} results found."
+  puts "Matches 1-#{matchset.size}:\n"
 
-# Display the results.
-puts "#{matchset.matches_estimated()} results found."
-puts "Matches 1-#{matchset.size}:\n"
+  matchset.matches.each {|m|
+    puts "#{m.rank + 1}: #{m.percent}% docid=#{m.docid} [#{m.document.data}]\n"
+  }
+end
+  
+# Put the top 5 (at most) docs into the rset if rset is empty
+if relevantDocs.empty?
+  matchset.matches[0..4].each {|match|
+    relevantDocs.add_document(match.docid())
+  }
+end
 
-matchset.matches.each {|m|
-  puts "#{m.rank + 1}: #{m.percent}% docid=#{m.docid} [#{m.document.data}]\n"
+# Get the suggested expand terms
+expandTerms = enquire.eset(10, relevantDocs)
+puts "#{expandTerms.size()} suggested additional terms:"
+expandTerms.terms.each {|term|
+  puts "  * Term \"#{term.name}\", weight #{term.weight}"
 }

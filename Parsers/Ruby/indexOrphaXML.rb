@@ -11,8 +11,8 @@ database = Xapian::WritableDatabase.new(ARGV[0], Xapian::DB_CREATE_OR_OPEN)
 
 indexer = Xapian::TermGenerator.new()
 stemmer = Xapian::Stem.new("english")
+indexer.database=database
 indexer.stemmer = stemmer
-
 
 xml.xpath("//Disorder/Name").each do |node|
 	puts node.content  
@@ -22,6 +22,7 @@ xml.xpath("//Disorder/Name").each do |node|
 
       indexer.document = doc
       indexer.index_text(node.content)
+	  indexer.set_flags(Xapian::TermGenerator::FLAG_SPELLING)
 
       # Add the document to the database
       database.add_document(doc)

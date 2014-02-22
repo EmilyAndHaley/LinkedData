@@ -50,7 +50,7 @@ query = qp.parse_query(queryString, Xapian::QueryParser::FLAG_SPELLING_CORRECTIO
 
 puts "Parsed query is: #{query.description()}"
 
-puts 'suggestion:'+qp.get_corrected_query_string()
+puts qp.get_corrected_query_string()
 
 # Find the top 10 results for the query.
 enquire.query = query
